@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7929CF672CD003D400EA2146 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929CF662CD003D400EA2146 /* SplashScreen.swift */; };
+		7929CF772CD013C600EA2146 /* loginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929CF762CD013C600EA2146 /* loginScreen.swift */; };
 		79964C552CCF305900F8EABC /* BoostEnGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79964C542CCF305900F8EABC /* BoostEnGuideApp.swift */; };
 		79964C592CCF305D00F8EABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79964C582CCF305D00F8EABC /* Assets.xcassets */; };
 		79964C5C2CCF305D00F8EABC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79964C5B2CCF305D00F8EABC /* Preview Assets.xcassets */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		7929CF662CD003D400EA2146 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		7929CF762CD013C600EA2146 /* loginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginScreen.swift; sourceTree = "<group>"; };
 		79964C512CCF305900F8EABC /* BoostEnGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoostEnGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79964C542CCF305900F8EABC /* BoostEnGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostEnGuideApp.swift; sourceTree = "<group>"; };
 		79964C582CCF305D00F8EABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				7929CF662CD003D400EA2146 /* SplashScreen.swift */,
+				7929CF762CD013C600EA2146 /* loginScreen.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7929CF772CD013C600EA2146 /* loginScreen.swift in Sources */,
 				7929CF672CD003D400EA2146 /* SplashScreen.swift in Sources */,
 				79964C552CCF305900F8EABC /* BoostEnGuideApp.swift in Sources */,
 			);
