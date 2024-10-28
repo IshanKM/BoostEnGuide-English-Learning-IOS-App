@@ -1,4 +1,4 @@
-## 1. Introduction
+## 1. Introduction of BoostEnGuide
 
 BoostEnGuide is a mobile application that is targeted to help and support users to learning
 English using comprehensible input method. It’s a highly effective solution to study a
