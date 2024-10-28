@@ -11,7 +11,7 @@ import SwiftUI
 struct BoostEnGuideApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
         }
     }
 }

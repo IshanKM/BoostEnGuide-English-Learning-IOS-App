@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7929CF672CD003D400EA2146 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929CF662CD003D400EA2146 /* SplashScreen.swift */; };
 		79964C552CCF305900F8EABC /* BoostEnGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79964C542CCF305900F8EABC /* BoostEnGuideApp.swift */; };
-		79964C572CCF305900F8EABC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79964C562CCF305900F8EABC /* ContentView.swift */; };
 		79964C592CCF305D00F8EABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79964C582CCF305D00F8EABC /* Assets.xcassets */; };
 		79964C5C2CCF305D00F8EABC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79964C5B2CCF305D00F8EABC /* Preview Assets.xcassets */; };
 		79964C672CCF305E00F8EABC /* BoostEnGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79964C662CCF305E00F8EABC /* BoostEnGuideTests.swift */; };
@@ -33,9 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7929CF662CD003D400EA2146 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		79964C512CCF305900F8EABC /* BoostEnGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoostEnGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79964C542CCF305900F8EABC /* BoostEnGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostEnGuideApp.swift; sourceTree = "<group>"; };
-		79964C562CCF305900F8EABC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		79964C582CCF305D00F8EABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79964C5B2CCF305D00F8EABC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		79964C5D2CCF305D00F8EABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7929CF652CD003A300EA2146 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				7929CF662CD003D400EA2146 /* SplashScreen.swift */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		7929CF6E2CD006AD00EA2146 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		79964C482CCF305900F8EABC = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +110,9 @@
 		79964C532CCF305900F8EABC /* BoostEnGuide */ = {
 			isa = PBXGroup;
 			children = (
+				7929CF6E2CD006AD00EA2146 /* Components */,
+				7929CF652CD003A300EA2146 /* UserInterface */,
 				79964C542CCF305900F8EABC /* BoostEnGuideApp.swift */,
-				79964C562CCF305900F8EABC /* ContentView.swift */,
 				79964C582CCF305D00F8EABC /* Assets.xcassets */,
 				79964C5D2CCF305D00F8EABC /* Info.plist */,
 				79964C5A2CCF305D00F8EABC /* Preview Content */,
@@ -259,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79964C572CCF305900F8EABC /* ContentView.swift in Sources */,
+				7929CF672CD003D400EA2146 /* SplashScreen.swift in Sources */,
 				79964C552CCF305900F8EABC /* BoostEnGuideApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
