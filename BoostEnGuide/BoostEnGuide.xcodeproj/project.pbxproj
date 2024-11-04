@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AECDC572CD9031700D83D5C /* loginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929CF762CD013C600EA2146 /* loginScreen.swift */; };
+		5AECDC5B2CD9031800D83D5C /* loginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929CF762CD013C600EA2146 /* loginScreen.swift */; };
 		7929CF672CD003D400EA2146 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929CF662CD003D400EA2146 /* SplashScreen.swift */; };
 		7929CF772CD013C600EA2146 /* loginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929CF762CD013C600EA2146 /* loginScreen.swift */; };
 		79964C552CCF305900F8EABC /* BoostEnGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79964C542CCF305900F8EABC /* BoostEnGuideApp.swift */; };
@@ -289,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79964C672CCF305E00F8EABC /* BoostEnGuideTests.swift in Sources */,
+				5AECDC572CD9031700D83D5C /* loginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79964C722CCF305E00F8EABC /* BoostEnGuideUITests.swift in Sources */,
+				5AECDC5B2CD9031800D83D5C /* loginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
