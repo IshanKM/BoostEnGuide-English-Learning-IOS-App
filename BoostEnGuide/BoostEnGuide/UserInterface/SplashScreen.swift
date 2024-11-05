@@ -11,7 +11,6 @@ struct SplashScreen: View {
             
             if isActive {
                 loginScreen()
-                    .transition(.opacity) // Fade transition for LoginScreen
             } else {
                 VStack {
                     ZStack {
@@ -51,3 +50,4 @@ struct SplashScreen_Previews: PreviewProvider {
         SplashScreen()
     }
 }
+
