@@ -1,0 +1,6 @@
+framework module Pods_BoostEnGuide {
+  umbrella header "Pods-BoostEnGuide-umbrella.h"
+
+  export *
+  module * { export * }
+}

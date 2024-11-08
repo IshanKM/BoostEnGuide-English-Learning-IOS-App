@@ -1,0 +1,24 @@
+# Define the platform for the project
+platform :ios, '12.0'
+
+target 'BoostEnGuide' do
+  # Use dynamic frameworks
+  use_frameworks!
+
+  # Add Firebase dependencies
+  pod 'Firebase/Analytics', '~> 9.0.0'    # For Firebase Analytics
+  pod 'Firebase/Auth', '~> 9.0.0'         # For Firebase Authentication
+  pod 'Firebase/Firestore', '~> 9.0.0'    # For Firestore (optional)
+  
+  # Add Google Sign-In
+  pod 'GoogleSignIn', '~> 5.0'
+
+  target 'BoostEnGuideTests' do
+    inherit! :search_paths
+    # Pods for testing (if needed)
+  end
+
+  target 'BoostEnGuideUITests' do
+    # Pods for UI testing (if needed)
+  end
+end

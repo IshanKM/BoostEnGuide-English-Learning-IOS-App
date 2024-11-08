@@ -10,7 +10,7 @@ struct SplashScreen: View {
                 .edgesIgnoringSafeArea(.all)
             
             if isActive {
-                loginScreen()
+                LoginScreen()
             } else {
                 VStack {
                     ZStack {
