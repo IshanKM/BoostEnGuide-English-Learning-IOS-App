@@ -6,7 +6,7 @@ import AuthenticationServices
 struct LoginScreen: View {
     @State private var isAuthenticated = false
     @StateObject private var appleSignInCoordinator = AppleSignInCoordinator()
-    @StateObject private var googleSignInCoordinator = GoogleSignInCoordinator() // Add this line
+    @StateObject private var googleSignInCoordinator = GoogleSignInCoordinator()
 
     // Check if the user is already logged in
     init() {
@@ -19,7 +19,7 @@ struct LoginScreen: View {
         VStack {
             if isAuthenticated {
                 // Show HomeScreen if the user is authenticated
-                //HomeScreen()
+                MainScreen()
             } else {
                 // Show LoginScreen if the user is not authenticated
                 ZStack {
@@ -43,7 +43,7 @@ struct LoginScreen: View {
                                     .scaledToFit()
                                     .frame(width: 100, height: 100)
                             )
-                            .offset(x: 0.43, y: 392)
+                            .offset(x: 0.43, y: -100)
 
                         Rectangle()
                             .foregroundColor(.clear)
@@ -78,6 +78,7 @@ struct LoginScreen: View {
                         // Sign in with Google button
                         Button(action: {
                             googleSignInCoordinator.signInWithGoogle {
+                                print("Google Sign-In success")
                                 self.isAuthenticated = true
                             }
                         }) {
@@ -106,124 +107,89 @@ struct LoginScreen: View {
                         }
                         .offset(x: -0.07, y: 279)
                         
-                        Text("BoostEnGuide is your path to English fluency in one month. Learn with documentaries and track vocabulary, and practice speaking and writing with AI-powered tools. Start improving your English skills today!")
-                                            .font(Font.custom("Inter", size: 13).weight(.medium))
-                                            .tracking(0.50)
-                                            .lineSpacing(10)
-                                            .foregroundColor(Color(red: 0.63, green: 0.65, blue: 0.75))
-                                            .padding(20) // Added padding
-                                            .offset(x: 0.43, y: 45.50)
-                                        
-                                        Ellipse()
-                                            .foregroundColor(.clear)
-                                            .frame(width: 103, height: 111)
-                                            .background(
-                                                Image("mainlogo")
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 100, height: 100)
-                                            )
-                                            .offset(x: 1.43, y: -123.50)
-                                        
-                                        Ellipse()
-                                            .foregroundColor(.clear)
-                                            .frame(width: 1, height: 3)
-                                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
-                                            .offset(x: 26.43, y: 15.50)
-                                        
-                                        Ellipse()
-                                            .foregroundColor(.clear)
-                                            .frame(width: 11, height: 12)
-                                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
-                                            .offset(x: -20.57, y: -222)
-                        
+                    Text("BoostEnGuide is your path to English fluency in one month. Learn with documentaries and track vocabulary, and practice speaking and writing with AI-powered tools. Start improving your English skills today!")
+                        .font(Font.custom("Inter", size: 13).weight(.medium))
+                        .tracking(0.50)
+                        .lineSpacing(10)
+                        .foregroundColor(Color(red: 0.63, green: 0.65, blue: 0.75))
+                        .padding(20) // Added padding
+                        .offset(x: 0.43, y: 45.50)
                     }
                     
                     Group {
-                                    Ellipse()
-                                        .foregroundColor(.clear)
-                                        .frame(width: 11, height: 12)
-                                        .background(Color(red: 0.85, green: 0.85, blue: 0.85).opacity(0.60))
-                                        .offset(x: 1.43, y: -222)
-                                    
-                                    Ellipse()
-                                        .foregroundColor(.clear)
-                                        .frame(width: 11, height: 12)
-                                        .background(Color(red: 0.85, green: 0.85, blue: 0.85).opacity(0.60))
-                                        .offset(x: 23.43, y: -222)
-                                    
-                                    Text("Sign in or Create a Account ")
-                                        .font(Font.custom("Inter", size: 15).weight(.semibold))
-                                        .tracking(0.50)
-                                        .lineSpacing(25)
-                                        .foregroundColor(Color(red: 0.91, green: 0.36, blue: 0.14))
-                                        .offset(x: -62.57, y: 140.50)
-                                    
-                                    Text("Welcome !")
-                                        .font(Font.custom("Inter", size: 15).weight(.bold))
-                                        .tracking(0.50)
-                                        .lineSpacing(25)
-                                        .foregroundColor(.black)
-                                        .offset(x: -140.57, y: -38.50)
-                                    
-                                    Text("By signing in to BoostEnGuide, your agree to our\nTerms and Privacy Policy.")
-                                        .font(Font.custom("Inter", size: 13).weight(.medium))
-                                        .tracking(0.50)
-                                        .lineSpacing(05)
-                                        .foregroundColor(Color(red: 0, green: 0, blue: 0).opacity(0.50))
-                                        .offset(x: 0, y: 374.50)
-                                }
+                        Text("Sign in or Create an Account")
+                            .font(Font.custom("Inter", size: 15).weight(.semibold))
+                            .tracking(0.50)
+                            .lineSpacing(25)
+                            .foregroundColor(Color(red: 0.91, green: 0.36, blue: 0.14))
+                            .offset(x: -62.57, y: 140.50)
+                        
+                        Text("Welcome !")
+                            .font(Font.custom("Inter", size: 15).weight(.bold))
+                            .tracking(0.50)
+                            .lineSpacing(25)
+                            .foregroundColor(.black)
+                            .offset(x: -140.57, y: -38.50)
+                        
+                        Text("By signing in to BoostEnGuide, you agree to our\nTerms and Privacy Policy.")
+                            .font(Font.custom("Inter", size: 13).weight(.medium))
+                            .tracking(0.50)
+                            .lineSpacing(05)
+                            .foregroundColor(Color(red: 0, green: 0, blue: 0).opacity(0.50))
+                            .offset(x: 0, y: 374.50)
+                    }
                 }
             }
         }
     }
 }
 
-struct loginScreen_Previews: PreviewProvider {
+struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
         LoginScreen()
     }
 }
 
-class GoogleSignInCoordinator: NSObject ,ObservableObject {
+class GoogleSignInCoordinator: NSObject, ObservableObject, GIDSignInDelegate {
     var onSignInSuccess: (() -> Void)?
 
-        func signInWithGoogle(completion: @escaping () -> Void) {
-            guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+    func signInWithGoogle(completion: @escaping () -> Void) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
 
-            // Configure GIDSignIn with the client ID
-            GIDSignIn.sharedInstance()?.clientID = clientID
-            self.onSignInSuccess = completion
-            
-            // Start the sign-in process
-            GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first?.rootViewController
-            GIDSignIn.sharedInstance()?.signIn()
+        // Configure GIDSignIn with the client ID
+        GIDSignIn.sharedInstance()?.clientID = clientID
+        self.onSignInSuccess = completion
+        
+        // Start the sign-in process
+        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first?.rootViewController
+        GIDSignIn.sharedInstance()?.delegate = self
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+
+    // GIDSignInDelegate method
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("Google Sign-In failed: \(error.localizedDescription)")
+            return
         }
 
-        // GIDSignInDelegate method
-        func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        // Authenticate with Firebase
+        guard let authentication = user.authentication, let idToken = authentication.idToken else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+
+        Auth.auth().signIn(with: credential) { authResult, error in
             if let error = error {
-                print("Google Sign-In failed: \(error.localizedDescription)")
-                return
-            }
-
-            // Authenticate with Firebase
-            guard let authentication = user.authentication, let idToken = authentication.idToken else { return }
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
-
-            Auth.auth().signIn(with: credential) { authResult, error in
-                if let error = error {
-                    print("Firebase Sign-In with Google failed: \(error.localizedDescription)")
-                } else {
-                    print("User signed in with Google successfully")
-                    // User signed in successfully, call the completion handler
-                    self.onSignInSuccess?()
-                }
+                print("Firebase Sign-In with Google failed: \(error.localizedDescription)")
+            } else {
+                print("User signed in with Google successfully")
+                // User signed in successfully, call the completion handler
+                self.onSignInSuccess?()
             }
         }
+    }
 }
 
-class AppleSignInCoordinator: NSObject ,ObservableObject{
+class AppleSignInCoordinator: NSObject, ObservableObject {
     var onSignInSuccess: (() -> Void)?
 
     func handleAuthorization(_ authorization: ASAuthorization) {
@@ -263,4 +229,3 @@ class AppleSignInCoordinator: NSObject ,ObservableObject{
         }
     }
 }
-

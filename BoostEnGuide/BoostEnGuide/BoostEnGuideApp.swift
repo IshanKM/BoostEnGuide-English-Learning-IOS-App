@@ -2,8 +2,6 @@
 //  BoostEnGuideApp.swift
 //  BoostEnGuide
 //
-//  Created by IKM on 10/28/24.
-//
 
 import SwiftUI
 import Firebase
@@ -16,7 +14,7 @@ struct BoostEnGuideApp: App {
    
     var body: some Scene {
         WindowGroup {
-            SplashScreen()
+            SplashScreen() // Root view that handles navigation logic based on authentication state
         }
     }
     
@@ -25,10 +23,10 @@ struct BoostEnGuideApp: App {
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             // Configure Firebase
             FirebaseApp.configure()
-            print("firebase configured")
+            print("Firebase configured")
             
             // Initialize Google Sign-In
-            GIDSignIn.sharedInstance().clientID = "470864448748-op6m8maa94nesp3884mg9lk7k60060p6.apps.googleusercontent.com" // Replace with your Web Client ID
+            GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
             print("Google Sign-In initialized")
             
             return true
